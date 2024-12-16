@@ -1,0 +1,15 @@
+.nav-item {
+    padding: 10px !important;
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 0; 
+}
+.img-logo {
+    width: 40px !important; 
+    height: 40px !important;
+}
+.linkedin-logo {
+    width: 45px !important; 
+    height: 40px !important;
+}
