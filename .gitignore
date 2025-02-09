@@ -1,1 +1,4 @@
-__pycache__
+db.sqlite3
+config/__pycache__
+my_app/__pycache__
+env/
