@@ -1,84 +1,18 @@
-body {
-    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
-    min-height: 100vh;
-}
-.section {
-    background: rgba(255,255,255,0.95);
-    border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    padding: 2rem 1.5rem;
-    margin-bottom: 2rem;
-}
-.card {
-    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
-    border-radius: 16px;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-.card:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
-}
-.btn-outline-primary {
-    border-radius: 24px;
-    font-weight: 500;
-    transition: background 0.2s, color 0.2s;
-}
-.btn-outline-primary:hover {
-    background: #0d6efd;
-    color: #fff;
-}
-h1, h2, h4 {
-    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-    font-weight: 700;
-}
-.navbar {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    border-bottom: 1px solid #e3e3e3;
-}
-footer {
-    background: linear-gradient(90deg, #e0eafc 0%, #cfdef3 100%);
-    color: #333;
-    text-align: center;
-    padding: 1.5rem 0 0.5rem 0;
-    font-size: 1rem;
-    border-top: 1px solid #e3e3e3;
-    margin-top: 2rem;
-}
-@media (max-width: 768px) {
-    .section {
-        padding: 1rem 0.5rem;
-    }
-    .card {
-        border-radius: 12px;
-    }
-}
-.nav-item {
-    padding: 10px !important;
-    transition: background 0.2s;
-    border-radius: 8px;
-}
-.nav-item:hover {
-    background: #e0eafc;
+:root {
+  --glass: rgba(255, 255, 255, 0.06);
 }
 
-.navbar-nav .nav-item:last-child {
-    margin-right: 0; 
+/* Use Inter as the primary font */
+html, body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
-.img-logo {
-    width: 40px !important; 
-    height: 40px !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+/* Hero gradient background */
+.hero-gradient {
+  background: linear-gradient(120deg, #0ea5a4 0%, #6366f1 45%, #ef476f 100%);
 }
-.linkedin-logo {
-    width: 45px !important; 
-    height: 40px !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-/* Section transitions */
-.section {
-    animation: fadeIn 0.7s;
-}
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+
+/* Smooth transitions when toggling themes */
+.theme-transition {
+  transition: background-color .25s ease, color .25s ease;
 }

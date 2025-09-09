@@ -1,159 +1,229 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <title>Pedro's Portfolio</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <link href="static/css/style.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-light sticky-top">
-      <div class="container-fluid">
-        <a href="#home" class="navbar-brand d-flex align-items-center img-logo" style="margin-left: 10px;">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pedro Criado — Software Engineer</title>
+  <meta name="description" content="Pedro Criado — Software engineer. Projects: CryptoRace, Pegasus Parking, Digital Data Recorder. Resume + contact." />
+
+  <!-- Tailwind via CDN for quick styling (good for prototypes) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body class="bg-gray-900 text-slate-100 antialiased">
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-black/40 border-b border-white/5">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-indigo-500 to-teal-400 flex items-center justify-center font-bold text-lg">PC</div>
+        <div>
+          <div class="font-semibold">Pedro Criado</div>
+          <div class="text-xs text-slate-300">Software Engineer</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300">
+        <a href="#projects" class="hover:text-white">Projects</a>
+        <a href="#experience" class="hover:text-white">Experience</a>
+        <a href="#skills" class="hover:text-white">Skills</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+        <a href="static/resume/Resume.pdf" class="ml-2 inline-flex items-center gap-2 px-3 py-1.5 bg-indigo-600 rounded-md text-sm font-medium text-white">Download Resume</a>
+      </nav>
+
+      <button id="mobileMenuBtn" class="md:hidden p-2 rounded-md bg-white/5">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile nav -->
+    <div id="mobileMenu" class="md:hidden hidden px-6 pb-6">
+      <div class="flex flex-col gap-3">
+        <a href="#projects" class="py-2">Projects</a>
+        <a href="#experience" class="py-2">Experience</a>
+        <a href="#skills" class="py-2">Skills</a>
+        <a href="#contact" class="py-2">Contact</a>
+        <a href="static/resume/Resume.pdf" class="py-2 font-medium">Download Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="max-w-5xl mx-auto px-6 py-12">
+    <section class="rounded-2xl overflow-hidden hero-gradient shadow-2xl p-8 grid md:grid-cols-3 gap-6 items-center">
+      <div class="md:col-span-2 text-center md:text-left">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Pedro Criado</h1>
+        <p class="mt-3 text-slate-100/90 max-w-xl">Software engineer with full‑stack and systems experience — backend services, real‑time apps, and secure data pipelines. Passionate about building fast, reliable systems and polished user experiences.</p>
+
+        <div class="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
+          <a href="#projects" class="px-4 py-2 bg-white/10 rounded-md text-sm">View Projects</a>
+          <a href="static/resume/Resume.pdf" class="px-4 py-2 bg-white/20 rounded-md text-sm">Download Resume</a>
+          <a href="#contact" class="px-4 py-2 border border-white/10 rounded-md text-sm">Contact</a>
+        </div>
+
+        <div class="mt-6 text-sm text-slate-300">Recent: Software Development Engineer Intern at Amazon (May–Jul 2024)</div>
+      </div>
+
+      <div class="flex items-center justify-center">
+        <div class="w-44 h-44 rounded-2xl bg-white/5 flex items-center justify-center text-3xl font-bold">
           <img src="static/img/icon.jpg" alt="a picture of me" class="img-logo rounded-circle">
-        </a>
-        <ul class="navbar-nav bd-navbar-nav flex-row">
-          <li class="nav-item">
-            <a href="https://github.com/pedrocriado" target="_blank" class="nav-link">
-              <img src="static/img/github_logo.png" alt="github" class="img-logo">
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="https://www.linkedin.com/in/pedrocriado-fl/" target="_blank" class="nav-link">
-              <img src="static/img/linkedin_logo.png" alt="linkedin" class="linkedin-logo">
-            </a>
-          </li>
-        </ul>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav" style="margin-right: 10px;">
-          <ul class="navbar-nav ml-md-auto">
-            <li class="nav-item">
-              <a href="#home" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#projects" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a href="#resume" class="nav-link">Resume</a>
-            </li>
-            <li class="nav-item">
-              <a href="#contact" class="nav-link">Contact Me</a>
-            </li>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="mt-12">
+      <h2 class="text-2xl font-bold">Experience</h2>
+      <div class="mt-4 space-y-4">
+        <div class="p-4 bg-white/3 rounded-lg border border-white/5">
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="font-semibold">Software Development Engineer Intern — Amazon</div>
+              <div class="text-xs text-slate-400">Austin, TX — May 2024 – Jul 2024</div>
+            </div>
+            <div class="text-sm text-slate-300">International Sellers App — video guide feature</div>
+          </div>
+          <ul class="mt-3 ml-4 list-disc text-sm text-slate-300">
+            <li>Designed and implemented a video guide section in the International Sellers App, enabling 25,000+ users to access
+tailored instructional content using Java with an Amazon proprietary framework similar to the Sprint Framework.</li>
+            <li>Learned implementation and use cases for AWS’s full suite of tools and services.</li>
+            <li>Collaborated with cross-functional teams to deliver end-to-end software development processes, including quality
+assurance and security reviews</li>
           </ul>
         </div>
       </div>
-    </nav>
+    </section>
 
-    <div class="container">
-      <!-- Home Section -->
-      <div id="home" class="section active">
-        <div class="text-center mt-5">
-          <h1>Welcome to My Portfolio</h1>
-          <p>Hello! My name is Pedro Criado, I am passionate developer with an interest in Networking and Embedded programming</p>
-        </div>
+    <!-- PROJECTS -->
+    <section id="projects" class="mt-12">
+      <div class="flex items-center justify-between">
+        <h2 class="text-2xl font-bold">Selected Projects</h2>
       </div>
 
-      <!-- Projects Section (Placeholder) -->
-      <div id="projects" class="section">
-        <div class="text-center mt-5">
-          <h2>Projects</h2>
-          <div class="row justify-content-center mt-4">
-            <div class="col-md-8">
-              <div class="card mb-4">
-                <div class="card-body">
-                  <h4 class="card-title">CryptoRace</h4>
-                  <p class="card-text">
-                    A competitive cryptography web application where users solve cryptography problems and compete to get better times.<br>
-                    <strong>Tech Stack:</strong> React.js, Tailwind CSS, Node.js, Express.js, MongoDB, Redis, WebAssembly, C
-                  </p>
-                  <a href="https://github.com/pedrocriado/CryptoRace" target="_blank" class="btn btn-outline-primary">View on GitHub</a>
-                </div>
-              </div>
-              <div class="card mb-4">
-                <div class="card-body">
-                  <h4 class="card-title">Pegasus Parking</h4>
-                  <p class="card-text">
-                    A smart parking solution helping UCF students and faculty find the best parking spots on campus. Features real-time parking spot tracking, interactive campus map, and user authentication.<br>
-                    <strong>Tech Stack:</strong> React 18, TypeScript, Vite, Chakra UI, Express.js, MongoDB, Passport.js
-                  </p>
-                  <a href="https://github.com/garyorsargos/pegasus-parking" target="_blank" class="btn btn-outline-primary">View on GitHub</a>
-                </div>
-              </div>
-              <div class="card mb-4">
-                <div class="card-body">
-                  <h4 class="card-title">Contact Manager</h4>
-                  <p class="card-text">
-                    A basic contact manager with create, retrieve, update, and delete (CRUD) functionality using a REST API written in PHP.<br>
-                    <strong>Tech Stack:</strong> JavaScript, PHP, HTML, CSS, MariaDB
-                  </p>
-                  <a href="https://github.com/matt11matthew/ContactManager" target="_blank" class="btn btn-outline-primary">View on GitHub</a>
-                </div>
-              </div>
+      <div class="mt-6 grid gap-6 md:grid-cols-2">
+
+        <!-- Card: Digital Data Recorder -->
+        <article class="p-6 bg-white/3 rounded-xl border border-white/5">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="text-lg font-semibold">Digital Data Recorder</h3>
+              <p class="mt-1 text-sm text-slate-300">Secure telemetry recorder built for DoD use. AES‑256 & RSA pipelines, multi‑protocol networking.</p>
+              <div class="mt-3 text-xs text-slate-400">Tech: C++, Linux, Docker, CMake</div>
+            </div>
+            <div class="flex flex-col gap-2 items-end">
+              <span class="text-xs text-slate-400">Embedded • Security</span>
             </div>
           </div>
-        </div>
-      </div>
+        </article>
 
-      <!-- Resume Section -->
-      <div id="resume" class="section">
-        <div class="container mt-5">
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <h2>My Resume</h2>
-              <p class="mt-3">
-                Feel free to view my resume to learn more about my skills and experience.
-              </p>
-              <button id="showResumeBtn" class="btn btn-primary mt-3">View My Resume</button>
-              <div id="resumeContent" style="display:none;">
-                <a href="static/resume/Resume.pdf" download class="btn btn-secondary btn-lg mt-3">
-                  <i class="fas fa-download"></i> Download Resume
-                </a>
-                <div class="resume-container mt-4">
-                  <iframe src="static/resume/Resume.pdf" class="embed-responsive-item" height="800" width="100%"></iframe>
-                </div>
-              </div>
+        <!-- Card: CryptoRace -->
+        <article class="p-6 bg-white/3 rounded-xl border border-white/5">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="text-lg font-semibold">CryptoRace</h3>
+              <p class="mt-1 text-sm text-slate-300">Real-time competitive cryptography web app. Multiplayer decoding challenges and leaderboards.</p>
+              <div class="mt-3 text-xs text-slate-400">Tech: Node.js, Express, MongoDB, Redis, GraphQL, TypeScript, WebSockets</div>
+            </div>
+            <div class="flex flex-col gap-2 items-end">
+              <a href="https://github.com/pedrocriado/CryptoRace" target="_blank" class="text-sm underline">View Repo</a>
+              <span class="text-xs text-slate-400">Real‑time</span>
             </div>
           </div>
+        </article>
+
+        <!-- Card: Pegasus Parking -->
+        <article class="p-6 bg-white/3 rounded-xl border border-white/5">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="text-lg font-semibold">Pegasus Parking</h3>
+              <p class="mt-1 text-sm text-slate-300">Campus parking guidance app that suggests garages by permit & proximity, integrated with Google Maps.</p>
+              <div class="mt-3 text-xs text-slate-400">Tech: React, Node.js, Express, MongoDB, Passport.js</div>
+            </div>
+            <div class="flex flex-col gap-2 items-end">
+              <a href="https://github.com/garyorsargos/pegasus-parking" target="_blank" class="text-sm underline">View Repo</a>
+              <span class="text-xs text-slate-400">Maps • OAuth</span>
+            </div>
+          </div>
+        </article>
+
+        
+
+        <!-- Card: SimpleC Compiler -->
+        <article class="p-6 bg-white/3 rounded-xl border border-white/5">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="text-lg font-semibold">SimpleC Compiler</h3>
+              <p class="mt-1 text-sm text-slate-300">C → x86 compiler with lexical analysis, parsing, semantic checks and code generation.</p>
+              <div class="mt-3 text-xs text-slate-400">Tech: C, x86</div>
+            </div>
+            <div class="flex flex-col gap-2 items-end">
+              <span class="text-xs text-slate-400">Compilers</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="mt-6 text-center">
+        <a href="https://github.com/pedrocriado" class="px-4 py-2 bg-white/10 rounded-md">See more on GitHub</a>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="mt-12">
+      <h2 class="text-2xl font-bold">Skills</h2>
+      <div class="mt-4 flex flex-wrap gap-3">
+        <span class="px-3 py-1.5 text-sm bg-white/5 rounded-full">C / C++</span>
+        <span class="px-3 py-1.5 text-sm bg-white/5 rounded-full">Java</span>
+        <span class="px-3 py-1.5 text-sm bg-white/5 rounded-full">Node.js</span>
+        <span class="px-3 py-1.5 text-sm bg-white/5 rounded-full">TypeScript</span>
+        <span class="px-3 py-1.5 text-sm bg-white/5 rounded-full">Redis</span>
+        <span class="px-3 py-1.5 text-sm bg-white/5 rounded-full">MongoDB</span>
+        <span class="px-3 py-1.5 text-sm bg-white/5 rounded-full">AWS</span>
+        <span class="px-3 py-1.5 text-sm bg-white/5 rounded-full">Linux</span>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="mt-12 mb-24 grid md:grid-cols-2 gap-6">
+      <div class="p-6 bg-white/3 rounded-xl border border-white/5">
+        <h3 class="font-semibold text-lg">Get in touch</h3>
+        <p class="mt-2 text-sm text-slate-300">I'm open to internships, full time positions, and new projects. Email me or find me on GitHub / LinkedIn.</p>
+
+        <div class="mt-4 space-y-2 text-sm">
+          <div>Email: <a class="underline" href="mailto:pc.pedrocriado@gmail.com">pc.pedrocriado@gmail.com</a></div>
+          <div>Phone: <span class="text-slate-300">+1 (786) 704‑4953</span></div>
+          <div>GitHub: <a class="underline" href="https://github.com/pedrocriado" target="_blank">github.com/pedrocriado</a></div>
+          <div>LinkedIn: <a class="underline" href="https://www.linkedin.com/in/pedrocriado-fl/" target="_blank">linkedin.com/in/pedrocriado-fl/</a></div>
         </div>
       </div>
 
-      <!-- Contact Section -->
-      <div id="contact" class="section">
-        <div class="text-center mt-5">
-          <h2>Contact Info</h2>
-          <p>
-            <strong>Email:</strong>
-            <a href="mailto:pc.pedrocriado@gmail.com">pc.pedrocriado@gmail.com</a>
-          </p>
-          <p>
-            <strong>Phone:</strong>
-            <a href="tel:+17847044953">+1 (784) 704-4953</a>
-          </p>
-        </div>
+      <div class="p-6 bg-white/3 rounded-xl border border-white/5">
+        <h3 class="font-semibold text-lg">Links</h3>
+        <ul class="mt-3 text-sm text-slate-300 space-y-2">
+          <li><a href="https://github.com/pedrocriado/CryptoRace" target="_blank" class="underline">CryptoRace (repo)</a></li>
+          <li><a href="https://github.com/garyorsargos/pegasus-parking" target="_blank" class="underline">Pegasus Parking (repo)</a></li>
+          <li><a href="static/resume/Resume.pdf" class="underline">Full resume (Download)</a></li>
+        </ul>
       </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-white/5 py-6 mt-12">
+    <div class="max-w-5xl mx-auto px-6 text-sm text-slate-400 flex items-center justify-between">
+      <div>© 2025 Pedro Criado</div>
+      <div>Running on Github Pages • <a href="https://github.com/pedrocriado" class="underline">GitHub</a></div>
     </div>
+  </footer>
 
-    <footer>
-      <div>
-        &copy; 2025 Pedro Criado &mdash; <a href="https://github.com/pedrocriado" target="_blank" style="color:#0d6efd;text-decoration:none;">GitHub</a>
-      </div>
-    </footer>
-
-  </body>
-</html>
-<script>    
-    document.addEventListener('DOMContentLoaded', function() {
-      var showBtn = document.getElementById('showResumeBtn');
-      var resumeContent = document.getElementById('resumeContent');
-      if (showBtn && resumeContent) {
-        showBtn.addEventListener('click', function() {
-          resumeContent.style.display = 'block';
-          showBtn.style.display = 'none';
-        });
-      }
+  <script>
+    // mobile menu toggle
+    document.getElementById('mobileMenuBtn').addEventListener('click', function(){
+      document.getElementById('mobileMenu').classList.toggle('hidden');
     });
   </script>
+</body>
+</html>
